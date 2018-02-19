@@ -56,16 +56,11 @@ public class Fractal extends JFrame
 		while (j >= 1)
 		{
 			hex = j % 255;
-			// if (e->colour != 1)
-			// 	hex *= 10;
 			tmp += hex;
 			tmp *= 10;
 			j /= 255;
 		}
 		blue = (int)(Math.sin(0.16 * tmp + 1) * 230 + 25);
-		// red = (e->colour == 0 ? (sin(0.016 * tmp + 4) * 230 + 25) : 0xf00000);
-		// green = (e->colour == 1 ? (sin(0.013 * tmp + 2) * 230 + 25) : 0x0f0000);
-		// blue = (e->colour == 2 ? (sin(0.01 * tmp + 1) * 230 + 25) : 0x00000f);
 		return(red + green + blue);
 	}
 
